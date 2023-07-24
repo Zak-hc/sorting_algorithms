@@ -26,8 +26,7 @@ if (z != i)
 v = array[z];
 array[z] = array[i];
 array[i] = v;
-}
 print_array(array, size);
 }
 }
-
+}
