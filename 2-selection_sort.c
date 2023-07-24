@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * bubble_sort - Sorts an array of integers in ascending order using
+ * selection_sort - Sorts an array of integers in ascending order using
  *               the bubble sort algorithm.
  * @array: Pointer to the first element of the array to be sorted.
  * @size: Number of elements in the array.
@@ -8,6 +8,8 @@
 void selection_sort(int *array, size_t size)
 {
 size_t i, y, z, v;
+if (array == NULL)
+return;
 for (i = 0; i < size - 1; i++)
 {
 z = i;
@@ -17,10 +19,13 @@ if (array[z] > array[y])
 {
 z = y;
 }
+if (z != i)
+{
 v = array[z];
 array[z] = array[i];
-array[z] = v;
+array[i] = v;
 }
-print_array(array,size);
+}
+print_array(array, size);
 }
 }
