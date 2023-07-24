@@ -21,6 +21,6 @@ v = array[z];
 array[z] = array[i];
 array[z] = v;
 }
-printi hna
+print_array(array,size);
 }
 }
